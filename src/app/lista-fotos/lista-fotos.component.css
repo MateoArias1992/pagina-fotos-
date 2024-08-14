@@ -1,0 +1,17 @@
+.foto-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual ancho */
+  gap: 16px; /* Espacio entre las imágenes */
+  padding: 16px; /* Espacio interno del contenedor */
+}
+
+.foto-container {
+  text-align: center; /* Centrar el texto y la imagen */
+  text-decoration-color: blue;
+}
+
+.foto-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* Bordes redondeados opcionales */
+}

@@ -1,0 +1,14 @@
+<div *ngIf="fotos && fotos.length > 0; else noFotos">
+  <div
+    *ngFor="let foto of fotos | paginate : { itemsPerPage: 10, currentPage: p }"
+    class="foto-container"
+  >
+    <h3>{{ foto.title }}</h3>
+    <img [src]="foto.thumbnailUrl" [alt]="foto.title" />
+  </div>
+  <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+</div>
+
+<ng-template #noFotos>
+  <p>No hay fotos disponibles.</p>
+</ng-template>
